@@ -311,7 +311,7 @@ void db_update_coinds(YAAMP_DB *db)
 		if(row[35]) coind->usesegwit = atoi(row[35]) > 0;
 
 		if(coind->usesegwit) g_stratum_segwit = true;
-		if(coind->useweb) g_stratum_web = true;
+		if(coind->usemweb) g_stratum_mweb = true;
 		// force the right rpcencoding for DCR
 		if(!strcmp(coind->symbol, "DCR") && strcmp(coind->rpcencoding, "DCR"))
 			strcpy(coind->rpcencoding, "DCR");
